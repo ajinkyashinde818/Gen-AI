@@ -1,6 +1,10 @@
-def append_to_lst(val, lst=[]):  
-    lst.append(val)  
-    return lst 
-    print(append_to_lst(1)) 
-    print(append_to_lst(2)) 
-    print(append_to_lst(3, [])) 
+import streamlit as st
+
+# Add a header title
+st.title("My First Streamlit App")
+
+# Create an interactive slider widget
+number = st.slider("Pick a number", 0, 100, 25)
+
+# Display the interactive output
+st.write(f"The square of {number} is {number ** 2}")
